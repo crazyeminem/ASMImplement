@@ -1,6 +1,6 @@
 #include "shapevector.h"
 namespace ASMMmodel{
-	double ShapeVector::calcMeanX()
+	double ShapeVector::calcMeanX()const
 	{
 		double x=0;
 		for (int i = 0; i < rows / 2;i++)
@@ -11,7 +11,7 @@ namespace ASMMmodel{
 		x = x / (rows / 2);
 		return x;
 	}
-	double ShapeVector::calcMeanY()
+	double ShapeVector::calcMeanY()const
 	{
 		double y = 0;
 		for (int i = 0; i < rows / 2; i++)
@@ -63,7 +63,7 @@ namespace ASMMmodel{
 	void ShapeVector::alignTo(const ShapeVector &a)
 	{
 		AffineTransform at;
-		at.getTransformFromAlain((*this), a);
+		at.getTransformFromAlign((*this), a);
 		at.transform(*this,*this);
 
 	}

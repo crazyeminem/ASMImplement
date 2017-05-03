@@ -30,6 +30,12 @@
     <ClInclude Include="affinetransform.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="shapemodel.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="asmimages.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -39,6 +45,15 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="shapevector.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="affinetransform.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ShapeModel.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="asmimages.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

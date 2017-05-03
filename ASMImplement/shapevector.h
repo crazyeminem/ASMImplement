@@ -21,15 +21,16 @@ namespace ASMMmodel {
 			return *this;
 		}
 		ShapeVector(){}
+		~ShapeVector(){}
 		void alignTo(const ShapeVector & a);//对齐到形状a
 		void COGToZero();//重心移动到原点
 		void normalizeToOne();//归一化向量
 		Rect getBoundRect();//找到外接矩形，用来初始定位
-		int nPoints(){ return rows / 2; }//返回特征点数
+		int nPoints()const{ return rows / 2; }//返回特征点数
 		void translateXY(double x, double y);//平移
 		void scaleR(double r);//缩放
-		double calcMeanX();//X方向均值
-		double calcMeanY();//Y方向均值
+		double calcMeanX()const;//X方向均值
+		double calcMeanY()const;//Y方向均值
 		double X(int i)const{ return (*this)(2 * i, 0); }//第i个点的x坐标
 		double &X(int i){ return(*this)(2 * i, 0); }
 		double Y(int i)const{ return(*this)(2 * i + 1); }//第i个特征点的y坐标

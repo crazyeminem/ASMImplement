@@ -9,13 +9,22 @@ namespace ASMMmodel{
 	public:
 		double a;//s*cos
 		double b;//s*sin
-		double theta;//旋转角度
-		double s;//缩放系数
+		//double theta;//旋转角度
+		//double s;//缩放系数
 		double Tx;//x方向平移
 		double Ty;//y方向平移
-		AffineTransform() :a(1), b(0), theta(0), s(1), Tx(0), Ty(0){}
+		AffineTransform() :a(1), b(0), Tx(0), Ty(0){}
 		void transform(const ShapeVector &src, ShapeVector &dst)const;//对src执行该变换
-		void getTransformFromAlain(const ShapeVector &A, const ShapeVector &B);//对齐A，B得到一个最佳变换
+		void getTransformFromAlign(const ShapeVector &A, const ShapeVector &B);//对齐A，B得到一个最佳变换
+		double getScale()const
+		{
+			return a*a + b*b;
+
+		}
+		double getRotateAngle()const
+		{
+			return cv::fastAtan2(b,a);//arc tan b/a
+		}
 		AffineTransform operator *(const AffineTransform &T)const
 		{
 			AffineTransform T2;
