@@ -132,13 +132,18 @@ namespace ASMMmodel{
 	}
 	void AsmImages::getLocalStructuresMap()
 	{
-		for (int i = 0; i < nPyramids;i++)
+		for (int l = 0; l < nPyramids;l++)
 		{
-			
+			vector<Mat_<double>> levelFeature;
+			for (int i = 0; i < nPoints;i++)
+			{
+				levelFeature.push_back(localGrysStrcut(i,l,0.5));
+			}
+			LocalFeatureMap.insert({l,levelFeature});
 		}
 	}
 
-	//·µ»Ølevel²ãÍ¼Ïñ
+	//·µ»Ølevel²ãÍ¼Ïñ//
 	Mat& AsmImages::getTrainImage(int level)
 	{
 		//TODO: insert return statement here
@@ -205,6 +210,7 @@ namespace ASMMmodel{
 	void AsmImages::loadPts()
 	{
 		pts = shape.vec2Pts();
+		nPoints = pts.size();
 	}
 	//shapevec³õÊ¼»¯
 	void AsmImages::loadShapeVec()
