@@ -5,6 +5,8 @@
 #include "opencv2/imgproc.hpp"
 #include "opencv2/highgui.hpp"
 #include <vector>
+#include "TrainingSetInfo.h"
+#include "asmimages.h"
 using cv::Mat_;
 using cv::PCA;
 using std::vector;
@@ -22,9 +24,11 @@ namespace ASMMmodel{
 		int nPoints;//标记点数
 		int nSamples;//样本数
 		vector < AsmImages > imgSet;//训练图像信息集
+		TrainingSetInfo alShapeInfo;//形状信息集
 		ShapeVector meanShape;//平均形状
 		Mat_<double> alShapeVecMat;//所有样本形状向量
 		vector<ShapeVector> alShapeVec;
+		
 		PCA *pcaShape;//PCA模型
 
 		// 建立PCA模型

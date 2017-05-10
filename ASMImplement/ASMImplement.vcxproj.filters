@@ -36,6 +36,12 @@
     <ClInclude Include="asmimages.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="TrainingSetInfo.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ASMImplement.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -54,6 +60,21 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="asmimages.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="TrainingSetInfo.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="txml\tinystr.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="txml\tinyxml.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="txml\tinyxmlerror.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="txml\tinyxmlparser.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

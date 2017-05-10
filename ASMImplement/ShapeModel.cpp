@@ -13,25 +13,25 @@ namespace ASMMmodel{
 
 
 	// 建立PCA模型
-	void ASMMmodel::ShapeModel::buildPCA()
+	void ShapeModel::buildPCA()
 	{
 	}
 
 
 	// Procrustes对齐
-	void ASMMmodel::ShapeModel::procrustesAlign()
+	void ShapeModel::procrustesAlign()
 	{
 	}
 
 
 	// 建立模型
-	void ASMMmodel::ShapeModel::buildModel()
+	void ShapeModel::buildModel()
 	{
 	}
 
 
 	// 显示模型
-	void ASMMmodel::ShapeModel::showModel()
+	void ShapeModel::showModel()
 	{
 	}
 }

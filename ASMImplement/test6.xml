@@ -1,0 +1,141 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<FaceDataset xmlns="https://github.com/luigivieira/Facial-Landmarks-Annotation-Tool" numberOfFeatures="22">
+    <Samples>
+        <Sample fileName="../../../MidFingers/20160117261153_0.jpg">
+            <Features>
+                <Feature id="0" x="23" y="6">
+                    <Connections>
+                        <Target id="1"/>
+                        <Target id="13"/>
+                    </Connections>
+                </Feature>
+                <Feature id="1" x="15" y="14">
+                    <Connections>
+                        <Target id="0"/>
+                        <Target id="2"/>
+                    </Connections>
+                </Feature>
+                <Feature id="2" x="12" y="29">
+                    <Connections>
+                        <Target id="1"/>
+                        <Target id="3"/>
+                    </Connections>
+                </Feature>
+                <Feature id="3" x="20" y="45">
+                    <Connections>
+                        <Target id="2"/>
+                        <Target id="4"/>
+                    </Connections>
+                </Feature>
+                <Feature id="4" x="21" y="59">
+                    <Connections>
+                        <Target id="3"/>
+                        <Target id="5"/>
+                    </Connections>
+                </Feature>
+                <Feature id="5" x="20" y="75">
+                    <Connections>
+                        <Target id="4"/>
+                        <Target id="6"/>
+                    </Connections>
+                </Feature>
+                <Feature id="6" x="31" y="77">
+                    <Connections>
+                        <Target id="5"/>
+                        <Target id="7"/>
+                    </Connections>
+                </Feature>
+                <Feature id="7" x="44" y="77">
+                    <Connections>
+                        <Target id="6"/>
+                        <Target id="8"/>
+                    </Connections>
+                </Feature>
+                <Feature id="8" x="54" y="74">
+                    <Connections>
+                        <Target id="7"/>
+                        <Target id="9"/>
+                    </Connections>
+                </Feature>
+                <Feature id="9" x="62" y="68">
+                    <Connections>
+                        <Target id="8"/>
+                        <Target id="10"/>
+                    </Connections>
+                </Feature>
+                <Feature id="10" x="55" y="54">
+                    <Connections>
+                        <Target id="9"/>
+                        <Target id="11"/>
+                    </Connections>
+                </Feature>
+                <Feature id="11" x="49" y="40">
+                    <Connections>
+                        <Target id="10"/>
+                        <Target id="12"/>
+                    </Connections>
+                </Feature>
+                <Feature id="12" x="47" y="23">
+                    <Connections>
+                        <Target id="11"/>
+                        <Target id="13"/>
+                    </Connections>
+                </Feature>
+                <Feature id="13" x="40" y="10">
+                    <Connections>
+                        <Target id="12"/>
+                        <Target id="0"/>
+                    </Connections>
+                </Feature>
+                <Feature id="14" x="24" y="90">
+                    <Connections>
+                        <Target id="15"/>
+                        <Target id="21"/>
+                    </Connections>
+                </Feature>
+                <Feature id="15" x="30" y="84">
+                    <Connections>
+                        <Target id="14"/>
+                        <Target id="16"/>
+                    </Connections>
+                </Feature>
+                <Feature id="16" x="44" y="82">
+                    <Connections>
+                        <Target id="15"/>
+                        <Target id="17"/>
+                    </Connections>
+                </Feature>
+                <Feature id="17" x="54" y="81">
+                    <Connections>
+                        <Target id="16"/>
+                        <Target id="18"/>
+                    </Connections>
+                </Feature>
+                <Feature id="18" x="66" y="83">
+                    <Connections>
+                        <Target id="17"/>
+                        <Target id="19"/>
+                    </Connections>
+                </Feature>
+                <Feature id="19" x="58" y="89">
+                    <Connections>
+                        <Target id="18"/>
+                        <Target id="20"/>
+                    </Connections>
+                </Feature>
+                <Feature id="20" x="48" y="93">
+                    <Connections>
+                        <Target id="19"/>
+                        <Target id="21"/>
+                    </Connections>
+                </Feature>
+                <Feature id="21" x="37" y="93">
+                    <Connections>
+                        <Target id="20"/>
+                        <Target id="14"/>
+                    </Connections>
+                </Feature>
+            </Features>
+        </Sample>
+    </Samples>
+</FaceDataset>

@@ -1,5 +1,19 @@
+
 #include "shapevector.h"
 namespace ASMMmodel{
+	
+	 ShapeVector::ShapeVector(ShapeInfo &spInfo)
+	{
+		size_t nums = spInfo.ptsInfos.size();
+		Mat_<double>shapeMat;
+		shapeMat.create(2 * nums, 1);
+		for (size_t i = 0; i < nums; i++)
+		{
+			shapeMat(i * 2, 0) = spInfo.ptsInfos[i].x;
+			shapeMat(i * 2 + 1, 0) = spInfo.ptsInfos[i].y;
+		}
+		*this = shapeMat;
+	}
 	double ShapeVector::calcMeanX()const
 	{
 		double x=0;
@@ -67,5 +81,27 @@ namespace ASMMmodel{
 		at.transform(*this,*this);
 
 	}
-	
+	vector<Point> ShapeVector::vec2Pts()const
+	{
+		vector<Point>Points;
+		for (int i = 0; i < rows / 2;i++)
+		{
+			Points.push_back(Point(static_cast<int>((*this).X(i)),static_cast<int>((*this).Y(i))));
+		}
+		return Points;
+	}
+	 Mat_<double> ShapeVector::loadFromShapeInfo(ShapeInfo &spInfo)
+	{
+		size_t nums = spInfo.ptsInfos.size();
+		Mat_<double>shapeMat;
+		shapeMat.create(2 * nums, 1);
+		for (size_t i = 0; i < nums; i++)
+		{
+			shapeMat(i * 2, 0) = spInfo.ptsInfos[i].x;
+			shapeMat(i * 2 + 1, 0) = spInfo.ptsInfos[i].y;
+		}
+		return shapeMat;
+	}
+
+
 }
