@@ -16,6 +16,12 @@ int main()
 	asImg.loadShapeVec();
 	asImg.loadPts();
 	Mat_<double>gryFeature=asImg.localGrysStrcut(0, 0, 0.5);
+	asImg.getLocalStructuresMap();
 	cout << gryFeature;
+	for (auto w : asImg.LocalFeatureMap[1])
+	{
+ 		cout << w << endl;
+	}
+	
 	return 0;
 }
