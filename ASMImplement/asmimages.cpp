@@ -106,15 +106,15 @@ namespace ASMMmodel{
 		Mat debug = gryPyramid[level].clone();
 		vector< Point_< int > > pV;
 		this->getNormalPoints(pId, level, pV);
-		circle(debug, pts[pId], 3,Scalar(0,0,0));
-		for (auto p:pV)
-		{
-			circle(debug, p, 2, Scalar(255, 255, 255));
-		}
-		namedWindow("debug");
-		imwrite("debug.jpg", debug);
-		imshow("debug", debug);
-		waitKey(0);
+		//circle(debug, pts[pId], 3,Scalar(0,0,0));
+		//for (auto p:pV)
+		//{
+		//	circle(debug, p, 2, Scalar(255, 255, 255));
+		//}
+		//namedWindow("debug");
+		//imwrite("debug.jpg", debug);
+		//imshow("debug", debug);
+		//waitKey(0);
 		Mat_< double > diffV(np, 1);
 		int k = (np - 1) / 2;
 		double absSum = 0;
@@ -219,9 +219,30 @@ namespace ASMMmodel{
 
 	}
 	//初始化图像信息
-	void AsmImages::init()
+	void AsmImages::init_build()
 	{
+				
+			loadImage(filename);
+			loadShapeVec();
+			loadPts();
+			getLocalStructuresMap();
 
+
+
+	}
+	void AsmImages::show(int l)
+	{
+		Mat ImgShow = imgPyramid[l].clone();
+		for (auto p:pts)
+		{
+			Point temp;
+			temp.x= p.x >> l;
+			temp.y = p.y >> l;
+			circle(ImgShow, temp, 2, Scalar(255, 0, 0));
+
+		}
+		imshow(filename, ImgShow);
+		waitKey(0);
 	}
 
 }

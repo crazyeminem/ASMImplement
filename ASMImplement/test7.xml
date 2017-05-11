@@ -1,0 +1,485 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<FaceDataset xmlns="https://github.com/luigivieira/Facial-Landmarks-Annotation-Tool" numberOfFeatures="26">
+    <Samples>
+        <Sample fileName="../../../MidFingers/20150615817451_1.jpg">
+            <Features>
+                <Feature x="7" y="128" id="0">
+                    <Connections>
+                        <Target id="1"/>
+                        <Target id="2"/>
+                    </Connections>
+                </Feature>
+                <Feature x="9" y="122" id="1">
+                    <Connections>
+                        <Target id="0"/>
+                        <Target id="3"/>
+                    </Connections>
+                </Feature>
+                <Feature x="9" y="136" id="2">
+                    <Connections>
+                        <Target id="9"/>
+                        <Target id="0"/>
+                    </Connections>
+                </Feature>
+                <Feature x="24" y="123" id="3">
+                    <Connections>
+                        <Target id="1"/>
+                        <Target id="4"/>
+                    </Connections>
+                </Feature>
+                <Feature x="50" y="123" id="4">
+                    <Connections>
+                        <Target id="3"/>
+                        <Target id="5"/>
+                    </Connections>
+                </Feature>
+                <Feature x="65" y="120" id="5">
+                    <Connections>
+                        <Target id="4"/>
+                        <Target id="6"/>
+                    </Connections>
+                </Feature>
+                <Feature x="72" y="125" id="6">
+                    <Connections>
+                        <Target id="5"/>
+                        <Target id="7"/>
+                    </Connections>
+                </Feature>
+                <Feature x="67" y="133" id="7">
+                    <Connections>
+                        <Target id="6"/>
+                        <Target id="8"/>
+                    </Connections>
+                </Feature>
+                <Feature x="50" y="138" id="8">
+                    <Connections>
+                        <Target id="7"/>
+                        <Target id="9"/>
+                    </Connections>
+                </Feature>
+                <Feature x="29" y="138" id="9">
+                    <Connections>
+                        <Target id="8"/>
+                        <Target id="2"/>
+                    </Connections>
+                </Feature>
+                <Feature x="12" y="31" id="10">
+                    <Connections>
+                        <Target id="11"/>
+                        <Target id="25"/>
+                    </Connections>
+                </Feature>
+                <Feature x="17" y="18" id="11">
+                    <Connections>
+                        <Target id="10"/>
+                        <Target id="12"/>
+                    </Connections>
+                </Feature>
+                <Feature x="33" y="6" id="12">
+                    <Connections>
+                        <Target id="11"/>
+                        <Target id="13"/>
+                    </Connections>
+                </Feature>
+                <Feature x="54" y="15" id="13">
+                    <Connections>
+                        <Target id="12"/>
+                        <Target id="14"/>
+                    </Connections>
+                </Feature>
+                <Feature x="60" y="33" id="14">
+                    <Connections>
+                        <Target id="13"/>
+                        <Target id="15"/>
+                    </Connections>
+                </Feature>
+                <Feature x="56" y="52" id="15">
+                    <Connections>
+                        <Target id="14"/>
+                        <Target id="16"/>
+                    </Connections>
+                </Feature>
+                <Feature x="53" y="71" id="16">
+                    <Connections>
+                        <Target id="15"/>
+                        <Target id="17"/>
+                    </Connections>
+                </Feature>
+                <Feature x="56" y="90" id="17">
+                    <Connections>
+                        <Target id="16"/>
+                        <Target id="18"/>
+                    </Connections>
+                </Feature>
+                <Feature x="63" y="111" id="18">
+                    <Connections>
+                        <Target id="17"/>
+                        <Target id="19"/>
+                    </Connections>
+                </Feature>
+                <Feature x="54" y="116" id="19">
+                    <Connections>
+                        <Target id="18"/>
+                        <Target id="20"/>
+                    </Connections>
+                </Feature>
+                <Feature x="38" y="118" id="20">
+                    <Connections>
+                        <Target id="19"/>
+                        <Target id="21"/>
+                    </Connections>
+                </Feature>
+                <Feature x="21" y="117" id="21">
+                    <Connections>
+                        <Target id="20"/>
+                        <Target id="22"/>
+                    </Connections>
+                </Feature>
+                <Feature x="11" y="113" id="22">
+                    <Connections>
+                        <Target id="21"/>
+                        <Target id="23"/>
+                    </Connections>
+                </Feature>
+                <Feature x="15" y="95" id="23">
+                    <Connections>
+                        <Target id="22"/>
+                        <Target id="24"/>
+                    </Connections>
+                </Feature>
+                <Feature x="20" y="72" id="24">
+                    <Connections>
+                        <Target id="23"/>
+                        <Target id="25"/>
+                    </Connections>
+                </Feature>
+                <Feature x="16" y="54" id="25">
+                    <Connections>
+                        <Target id="24"/>
+                        <Target id="10"/>
+                    </Connections>
+                </Feature>
+            </Features>
+        </Sample>
+        <Sample fileName="../../../MidFingers/20151227220168_0.jpg">
+            <Features>
+                <Feature x="15" y="100" id="0">
+                    <Connections>
+                        <Target id="1"/>
+                        <Target id="2"/>
+                    </Connections>
+                </Feature>
+                <Feature x="18" y="94" id="1">
+                    <Connections>
+                        <Target id="0"/>
+                        <Target id="3"/>
+                    </Connections>
+                </Feature>
+                <Feature x="20" y="104" id="2">
+                    <Connections>
+                        <Target id="9"/>
+                        <Target id="0"/>
+                    </Connections>
+                </Feature>
+                <Feature x="29" y="94" id="3">
+                    <Connections>
+                        <Target id="1"/>
+                        <Target id="4"/>
+                    </Connections>
+                </Feature>
+                <Feature x="53" y="93" id="4">
+                    <Connections>
+                        <Target id="3"/>
+                        <Target id="5"/>
+                    </Connections>
+                </Feature>
+                <Feature x="62" y="93" id="5">
+                    <Connections>
+                        <Target id="4"/>
+                        <Target id="6"/>
+                    </Connections>
+                </Feature>
+                <Feature x="65" y="97" id="6">
+                    <Connections>
+                        <Target id="5"/>
+                        <Target id="7"/>
+                    </Connections>
+                </Feature>
+                <Feature x="59" y="102" id="7">
+                    <Connections>
+                        <Target id="6"/>
+                        <Target id="8"/>
+                    </Connections>
+                </Feature>
+                <Feature x="51" y="103" id="8">
+                    <Connections>
+                        <Target id="7"/>
+                        <Target id="9"/>
+                    </Connections>
+                </Feature>
+                <Feature x="29" y="104" id="9">
+                    <Connections>
+                        <Target id="8"/>
+                        <Target id="2"/>
+                    </Connections>
+                </Feature>
+                <Feature x="15" y="30" id="10">
+                    <Connections>
+                        <Target id="11"/>
+                        <Target id="25"/>
+                    </Connections>
+                </Feature>
+                <Feature x="17" y="18" id="11">
+                    <Connections>
+                        <Target id="10"/>
+                        <Target id="12"/>
+                    </Connections>
+                </Feature>
+                <Feature x="33" y="6" id="12">
+                    <Connections>
+                        <Target id="11"/>
+                        <Target id="13"/>
+                    </Connections>
+                </Feature>
+                <Feature x="54" y="15" id="13">
+                    <Connections>
+                        <Target id="12"/>
+                        <Target id="14"/>
+                    </Connections>
+                </Feature>
+                <Feature x="57" y="27" id="14">
+                    <Connections>
+                        <Target id="13"/>
+                        <Target id="15"/>
+                    </Connections>
+                </Feature>
+                <Feature x="53" y="41" id="15">
+                    <Connections>
+                        <Target id="14"/>
+                        <Target id="16"/>
+                    </Connections>
+                </Feature>
+                <Feature x="54" y="59" id="16">
+                    <Connections>
+                        <Target id="15"/>
+                        <Target id="17"/>
+                    </Connections>
+                </Feature>
+                <Feature x="60" y="71" id="17">
+                    <Connections>
+                        <Target id="16"/>
+                        <Target id="18"/>
+                    </Connections>
+                </Feature>
+                <Feature x="65" y="81" id="18">
+                    <Connections>
+                        <Target id="17"/>
+                        <Target id="19"/>
+                    </Connections>
+                </Feature>
+                <Feature x="55" y="86" id="19">
+                    <Connections>
+                        <Target id="18"/>
+                        <Target id="20"/>
+                    </Connections>
+                </Feature>
+                <Feature x="46" y="88" id="20">
+                    <Connections>
+                        <Target id="19"/>
+                        <Target id="21"/>
+                    </Connections>
+                </Feature>
+                <Feature x="29" y="87" id="21">
+                    <Connections>
+                        <Target id="20"/>
+                        <Target id="22"/>
+                    </Connections>
+                </Feature>
+                <Feature x="18" y="83" id="22">
+                    <Connections>
+                        <Target id="21"/>
+                        <Target id="23"/>
+                    </Connections>
+                </Feature>
+                <Feature x="21" y="74" id="23">
+                    <Connections>
+                        <Target id="22"/>
+                        <Target id="24"/>
+                    </Connections>
+                </Feature>
+                <Feature x="23" y="62" id="24">
+                    <Connections>
+                        <Target id="23"/>
+                        <Target id="25"/>
+                    </Connections>
+                </Feature>
+                <Feature x="22" y="47" id="25">
+                    <Connections>
+                        <Target id="24"/>
+                        <Target id="10"/>
+                    </Connections>
+                </Feature>
+            </Features>
+        </Sample>
+        <Sample fileName="../../../MidFingers/20160117261153_0.jpg">
+            <Features>
+                <Feature x="23" y="92" id="0">
+                    <Connections>
+                        <Target id="1"/>
+                        <Target id="2"/>
+                    </Connections>
+                </Feature>
+                <Feature x="25" y="87" id="1">
+                    <Connections>
+                        <Target id="0"/>
+                        <Target id="3"/>
+                    </Connections>
+                </Feature>
+                <Feature x="28" y="95" id="2">
+                    <Connections>
+                        <Target id="9"/>
+                        <Target id="0"/>
+                    </Connections>
+                </Feature>
+                <Feature x="34" y="84" id="3">
+                    <Connections>
+                        <Target id="1"/>
+                        <Target id="4"/>
+                    </Connections>
+                </Feature>
+                <Feature x="52" y="82" id="4">
+                    <Connections>
+                        <Target id="3"/>
+                        <Target id="5"/>
+                    </Connections>
+                </Feature>
+                <Feature x="61" y="79" id="5">
+                    <Connections>
+                        <Target id="4"/>
+                        <Target id="6"/>
+                    </Connections>
+                </Feature>
+                <Feature x="65" y="83" id="6">
+                    <Connections>
+                        <Target id="5"/>
+                        <Target id="7"/>
+                    </Connections>
+                </Feature>
+                <Feature x="62" y="88" id="7">
+                    <Connections>
+                        <Target id="6"/>
+                        <Target id="8"/>
+                    </Connections>
+                </Feature>
+                <Feature x="54" y="91" id="8">
+                    <Connections>
+                        <Target id="7"/>
+                        <Target id="9"/>
+                    </Connections>
+                </Feature>
+                <Feature x="37" y="94" id="9">
+                    <Connections>
+                        <Target id="8"/>
+                        <Target id="2"/>
+                    </Connections>
+                </Feature>
+                <Feature x="12" y="28" id="10">
+                    <Connections>
+                        <Target id="11"/>
+                        <Target id="25"/>
+                    </Connections>
+                </Feature>
+                <Feature x="16" y="14" id="11">
+                    <Connections>
+                        <Target id="10"/>
+                        <Target id="12"/>
+                    </Connections>
+                </Feature>
+                <Feature x="23" y="6" id="12">
+                    <Connections>
+                        <Target id="11"/>
+                        <Target id="13"/>
+                    </Connections>
+                </Feature>
+                <Feature x="37" y="8" id="13">
+                    <Connections>
+                        <Target id="12"/>
+                        <Target id="14"/>
+                    </Connections>
+                </Feature>
+                <Feature x="47" y="17" id="14">
+                    <Connections>
+                        <Target id="13"/>
+                        <Target id="15"/>
+                    </Connections>
+                </Feature>
+                <Feature x="49" y="26" id="15">
+                    <Connections>
+                        <Target id="14"/>
+                        <Target id="16"/>
+                    </Connections>
+                </Feature>
+                <Feature x="49" y="43" id="16">
+                    <Connections>
+                        <Target id="15"/>
+                        <Target id="17"/>
+                    </Connections>
+                </Feature>
+                <Feature x="54" y="55" id="17">
+                    <Connections>
+                        <Target id="16"/>
+                        <Target id="18"/>
+                    </Connections>
+                </Feature>
+                <Feature x="62" y="67" id="18">
+                    <Connections>
+                        <Target id="17"/>
+                        <Target id="19"/>
+                    </Connections>
+                </Feature>
+                <Feature x="51" y="76" id="19">
+                    <Connections>
+                        <Target id="18"/>
+                        <Target id="20"/>
+                    </Connections>
+                </Feature>
+                <Feature x="43" y="76" id="20">
+                    <Connections>
+                        <Target id="19"/>
+                        <Target id="21"/>
+                    </Connections>
+                </Feature>
+                <Feature x="30" y="77" id="21">
+                    <Connections>
+                        <Target id="20"/>
+                        <Target id="22"/>
+                    </Connections>
+                </Feature>
+                <Feature x="21" y="76" id="22">
+                    <Connections>
+                        <Target id="21"/>
+                        <Target id="23"/>
+                    </Connections>
+                </Feature>
+                <Feature x="22" y="61" id="23">
+                    <Connections>
+                        <Target id="22"/>
+                        <Target id="24"/>
+                    </Connections>
+                </Feature>
+                <Feature x="22" y="48" id="24">
+                    <Connections>
+                        <Target id="23"/>
+                        <Target id="25"/>
+                    </Connections>
+                </Feature>
+                <Feature x="18" y="40" id="25">
+                    <Connections>
+                        <Target id="24"/>
+                        <Target id="10"/>
+                    </Connections>
+                </Feature>
+            </Features>
+        </Sample>
+    </Samples>
+</FaceDataset>

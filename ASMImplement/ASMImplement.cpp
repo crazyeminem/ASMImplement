@@ -8,20 +8,8 @@ using namespace cv;
 int main()
 {
 	ShapeModel spModel;
-	spModel.alShapeInfo.loadFromXml("test6.xml");
-	ShapeInfo spInfo = spModel.alShapeInfo.alShapeInfos[0];
-	AsmImages asImg(spInfo);
-	cout << asImg.filename << endl;
-	asImg.loadImage("20160117261153_0.jpg");
-	asImg.loadShapeVec();
-	asImg.loadPts();
-	Mat_<double>gryFeature=asImg.localGrysStrcut(0, 0, 0.5);
-	asImg.getLocalStructuresMap();
-	cout << gryFeature;
-	for (auto w : asImg.LocalFeatureMap[1])
-	{
- 		cout << w << endl;
-	}
-	
+	spModel.buildModel("test7.xml");
+	spModel.imgSet[0].show(0);
+	cout << spModel.alshapeMat << endl;
 	return 0;
 }

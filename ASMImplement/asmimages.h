@@ -55,7 +55,9 @@ namespace ASMMmodel{
 		//param step 步长
 		void getNormalPoints(int pId,int level, vector<Point> &normPoints,int pOffset=0,double step=1.0);
 		//初始化图像信息
-		void init();
+		void init_build();
+
+		void show(int l);
 	};
 }
 #endif
