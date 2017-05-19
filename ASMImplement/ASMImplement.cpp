@@ -8,8 +8,8 @@ using namespace cv;
 int main()
 {
 	ShapeModel spModel;
-	spModel.buildModel("test7.xml");
+	spModel.buildModel("midfinger.xml");
 	spModel.imgSet[0].show(0);
-	cout << spModel.alshapeMat << endl;
+	spModel.showModel();
 	return 0;
 }

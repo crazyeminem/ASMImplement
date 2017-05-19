@@ -29,7 +29,7 @@ namespace ASMMmodel {
 		void alignTo(const ShapeVector & a);//对齐到形状a
 		void COGToZero();//重心移动到原点
 		void normalizeToOne();//归一化向量
-		Rect getBoundRect();//找到外接矩形，用来初始定位
+		Rect_<double> getBoundRect();//找到外接矩形，用来初始定位
 		int nPoints()const{ return rows / 2; }//返回特征点数
 		void translateXY(double x, double y);//平移
 		void scaleR(double r);//缩放
@@ -41,7 +41,8 @@ namespace ASMMmodel {
 		double &Y(int i){ return(*this)(2 * i + 1); }
 		vector<Point> vec2Pts()const;//转化成点的形式
 		static Mat_<double> loadFromShapeInfo(ShapeInfo &spInfo);
-		
+		void show();
+		AffineTransform at;
 
 	};
 

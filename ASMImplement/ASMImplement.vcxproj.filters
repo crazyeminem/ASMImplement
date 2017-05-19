@@ -42,6 +42,9 @@
     <ClInclude Include="ASMImplement.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="ASM.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -75,6 +78,9 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="txml\tinyxmlparser.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ASM.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

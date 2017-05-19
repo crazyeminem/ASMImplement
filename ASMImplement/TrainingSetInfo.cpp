@@ -76,34 +76,34 @@ namespace ASMMmodel{
 		switch (t)
 		{
 		case TiXmlNode::TINYXML_DOCUMENT:
-			printf("Document");
+			//printf("Document");
 			break;
 
 		case TiXmlNode::TINYXML_ELEMENT:
-			printf("Element [%s]", pParent->Value());
+			//printf("Element [%s]", pParent->Value());
 			get_attributes(pParent->ToElement());
 			break;
 
 		case TiXmlNode::TINYXML_COMMENT:
-			printf("Comment: [%s]", pParent->Value());
+			//printf("Comment: [%s]", pParent->Value());
 			break;
 
 		case TiXmlNode::TINYXML_UNKNOWN:
-			printf("Unknown");
+			//printf("Unknown");
 			break;
 
 		case TiXmlNode::TINYXML_TEXT:
 			pText = pParent->ToText();
-			printf("Text: [%s]", pText->Value());
+			//printf("Text: [%s]", pText->Value());
 			break;
 
 		case TiXmlNode::TINYXML_DECLARATION:
-			printf("Declaration");
+			//printf("Declaration");
 			break;
 		default:
 			break;
 		}
-		printf("\n");
+		//printf("\n");
 		for (pChild = pParent->FirstChild(); pChild != 0; pChild = pChild->NextSibling())
 		{
 			dump_to_shapeInfo(pChild);
@@ -115,7 +115,7 @@ namespace ASMMmodel{
 		bool loadOkay = doc.LoadFile();
 		if (loadOkay)
 		{
-			printf("\n%s:\n", filename);
+			//printf("\n%s:\n", filename);
 			//dump_to_stdout(&doc);
 			dump_to_shapeInfo(&doc);
 

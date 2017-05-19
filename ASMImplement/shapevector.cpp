@@ -57,7 +57,7 @@ namespace ASMMmodel{
 	{
 		scaleR(1 / norm(*this));
 	}
-	cv::Rect ShapeVector::getBoundRect()
+	cv::Rect_<double> ShapeVector::getBoundRect()
 	{
 		int nP = nPoints();
 		double minX = 1e10, minY = 1e10, maxX = -1e10, maxY = -1e10;
@@ -76,7 +76,6 @@ namespace ASMMmodel{
 	}
 	void ShapeVector::alignTo(const ShapeVector &a)
 	{
-		AffineTransform at;
 		at.getTransformFromAlign((*this), a);
 		at.transform(*this,*this);
 
@@ -102,6 +101,18 @@ namespace ASMMmodel{
 		}
 		return shapeMat;
 	}
+	 void ShapeVector::show()
+	 {
+		 cout << *this << endl;
+		 vector<Point> pts = this->vec2Pts();
+		 Mat vec_img = Mat::zeros(Size(255,255),CV_8U);
+		 for (auto p:pts)
+		 {
+			 circle(vec_img, p, 2, Scalar(255, 255, 255));
+		 }
+		 imshow("vec_img", vec_img);
+		 waitKey(100);
+	 }
 
 
 }

@@ -82,6 +82,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="affinetransform.h" />
+    <ClInclude Include="ASM.h" />
     <ClInclude Include="asmimages.h" />
     <ClInclude Include="ASMImplement.h" />
     <ClInclude Include="shapemodel.h" />
@@ -92,6 +93,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="affinetransform.cpp" />
+    <ClCompile Include="ASM.cpp" />
     <ClCompile Include="asmimages.cpp" />
     <ClCompile Include="ASMImplement.cpp" />
     <ClCompile Include="ShapeModel.cpp" />
