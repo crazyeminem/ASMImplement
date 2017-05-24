@@ -2,7 +2,7 @@
 #include "asmimages.h"
 namespace ASMMmodel{
 
-	void AsmImages::getNormalPoints(int pId, int level, vector<Point> &normPoints, int pOffset,double step)
+	void AsmImages::getNormalPoints(int pId,int rad, int level, vector<Point> &normPoints, int pOffset,double step)
 	{
 		//计算norm方向
 		Point_<double>va,vb, vDirection;
@@ -67,7 +67,7 @@ namespace ASMMmodel{
 
 		// Test best j
 		j = 1;
-		for (i = 1; i <= (np-1)/2; i++){
+		for (i = 1; i <= rad; i++){
 			do {
 				nx = cvRound(j*vDirection.x);
 				ny = cvRound(j*vDirection.y);
@@ -79,7 +79,7 @@ namespace ASMMmodel{
 		}
 		j--;
 
-		normPoints.resize(np);
+		normPoints.resize(2*rad+1);
 		int rX, rY;
 		for (i = (np-1)/2; i >= -(np-1)/2; i--){
 			rX = (pts[pId].x >> level) + nx + offsetX;
@@ -88,7 +88,7 @@ namespace ASMMmodel{
 			if (rY < 0) rY = 0;
 			if (rX >= (srcImage.cols >> level)) rX = (srcImage.cols >> level) - 1;
 			if (rY >= (srcImage.rows >> level)) rY = (srcImage.rows >> level) - 1;
-			normPoints[i + (np-1)/2] = Point_< int >(rX, rY);
+			normPoints[i + rad] = Point_< int >(rX, rY);
 			//v(i+(k+1), 0) = this->imgdata.at< char >(nx, ny);
 			do {
 				nx = cvRound(j*vDirection.x);
@@ -105,7 +105,8 @@ namespace ASMMmodel{
 	{
 		Mat debug = gryPyramid[level].clone();
 		vector< Point_< int > > pV;
-		this->getNormalPoints(pId, level, pV);
+		int rad = (np - 1) / 2;
+		this->getNormalPoints(pId,rad, level, pV);
 		//circle(debug, pts[pId], 3,Scalar(0,0,0));
 		//for (auto p:pV)
 		//{
@@ -116,11 +117,10 @@ namespace ASMMmodel{
 		//imshow("debug", debug);
 		//waitKey(0);
 		Mat_< double > diffV(np, 1);
-		int k = (np - 1) / 2;
 		double absSum = 0;
-		for (int i = k; i >= -k; i--){
-			diffV(i + k, 0) = gradientPyramid[level](pV[i + k]);
-			absSum += fabs(diffV(i + k, 0));
+		for (int i = rad; i >= -rad; i--){
+			diffV(i + rad, 0) = gradientPyramid[level](pV[i + rad]);
+			absSum += fabs(diffV(i + rad, 0));
 		}
 		if (absSum == 0){
 			printf("Warning: absSum=0....Level: %d, pID: %d\n", level, pId);
@@ -218,14 +218,29 @@ namespace ASMMmodel{
 		this->shape = ShapeVector::loadFromShapeInfo(shapeInfo);
 
 	}
+	void AsmImages::loadShapeVec(const ShapeVector &spvec)
+	{
+		this->shape = spvec;
+		shapeLoaded = 1;
+	}
 	//初始化图像信息
 	void AsmImages::init_build()
 	{
 				
 			loadImage(filename);
-			loadShapeVec();
-			loadPts();
-			getLocalStructuresMap();
+			if (loadShapeInfo)
+			{
+				loadShapeVec();
+				loadPts();
+				getLocalStructuresMap();
+			}
+			else if (shapeLoaded)
+			{
+				loadPts();
+				getLocalStructuresMap();
+			}
+			else
+				cout << "No Shape Information Loaded,Load Shape or Shape Info first!" << endl;
 
 
 

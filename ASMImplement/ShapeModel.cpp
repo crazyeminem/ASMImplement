@@ -1,6 +1,6 @@
 #include "stdafx.h"
 #include "shapemodel.h"
-#include <random>
+
 namespace ASMMmodel{
 
 	ShapeModel::~ShapeModel()
@@ -106,7 +106,7 @@ namespace ASMMmodel{
 		nPoints = alShapeInfo.alShapeInfos[0].ptsInfos.size();
 		for (auto sp:alShapeInfo.alShapeInfos)
 		{
-			AsmImages asImg(sp);
+			AsmImages asImg(sp,np,pyramidLevel);
 			asImg.init_build();
 			imgSet.push_back(asImg);
 			alShapeVec.push_back(asImg.shape);

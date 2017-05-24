@@ -13,13 +13,15 @@ namespace ASMMmodel{
 	class AsmImages
 	{
 	public:
-		AsmImages(ShapeInfo sp,int n = 7, int np = 3) :shapeInfo(sp),nPoints(np), np(n),nPyramids(np),filename(sp.imgname){}//自定义采样数，金字塔层数
+		AsmImages(ShapeInfo sp, int n = 7, int np = 3) :shapeInfo(sp), np(n), nPyramids(np), filename(sp.imgname){ loadShapeInfo = 1; }//自定义采样数，金字塔层数
 		~AsmImages(){}
 		AsmImages(){};
 		int nPoints;//点数
 		int np;//局部灰度模型的采样长度,应该为奇数，中心在特征点
 		int nPyramids;//金字塔层数
 		bool isEmpty=1;
+		bool loadShapeInfo = 0;
+		bool shapeLoaded = 0;
 		vector<Mat>imgPyramid;//图像金字塔
 		vector<Mat_<uchar>>gryPyramid;//灰度金字塔
 		vector<Mat_<double>>gradientPyramid;//梯度金字塔
@@ -45,6 +47,7 @@ namespace ASMMmodel{
 		bool empty();
 		//从shapeinfo读取shapevector
 		void loadShapeVec();
+		void loadShapeVec(const ShapeVector &spvec);
 		//读取特征点集
 		void loadPts();
 		//采样profile normal
@@ -52,11 +55,12 @@ namespace ASMMmodel{
 		//param level 所在图像层
 		//param normPoints 所需法线点集
 		//param pOffset 搜索中心
+		//param rad 搜索半径
 		//param step 步长
-		void getNormalPoints(int pId,int level, vector<Point> &normPoints,int pOffset=0,double step=1.0);
+		void getNormalPoints(int pId,int rad,int level, vector<Point> &normPoints,int pOffset=0,double step=1.0);
 		//初始化图像信息
 		void init_build();
-
+		//搜索最佳点位置
 		void show(int l);
 	};
 }
