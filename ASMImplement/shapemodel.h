@@ -50,7 +50,7 @@ namespace ASMMmodel{
 		int nSample(){ return nSamples; }
 		//返回金字塔层数
 		int nPyramid(){ return pyramidLevel; }
-		//设置建模参数，迭代次数itol，收敛阈值ftol，pca参数sigma,采样长度，金字塔层数
+		//设置建模参数，迭代次数it，收敛阈值ft，pca参数si,采样长度sl，金字塔层数pl
 		void setParam(int it, double ft, double si,int sl,int pl)
 		{
 			itol = it;
@@ -70,7 +70,7 @@ namespace ASMMmodel{
 		int pyramidLevel = 3;//金字塔层数
 		int nPoints;//标记点数
 		int nSamples;//样本数
-		int clampFactor = 2;
+		int clampFactor = 3;
 	}; 
 	template<typename T>
 	Mat_<T> mergeMatsByCol(const vector<Mat_<T>> &Mats);

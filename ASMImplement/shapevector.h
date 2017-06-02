@@ -13,6 +13,8 @@ using namespace std;
 using namespace cv;
 
 namespace ASMMmodel {
+	class ShapeInfo;
+	class PointInfo;
 	/*形状向量，（x1,y1,x2,y2,……,xn,yn）^t,用opencv的1-D矩阵表示
 	*/
 	class ShapeVector:public Mat_<double>
@@ -23,9 +25,20 @@ namespace ASMMmodel {
 			Mat_< double >::operator=(a);
 			return *this;
 		}
+		ShapeVector(const vector<Point> &pointList)
+		{
+			Mat_<double> m(2*pointList.size(),1);
+			for (int i = 0; i < pointList.size();i++)
+			{
+				m(2 * i, 0) = pointList[i].x;
+				m(2 * i + 1, 0) = pointList[i].y;
+
+			}
+			this->ShapeVector::ShapeVector(m);
+		}
 		ShapeVector(){}
 		~ShapeVector(){}
-		ShapeVector (ShapeInfo &spInfo);//从shapeInfo文件初始化
+		ShapeVector (const ShapeInfo &spInfo);//从shapeInfo文件初始化
 		void alignTo(const ShapeVector & a);//对齐到形状a
 		void COGToZero();//重心移动到原点
 		void normalizeToOne();//归一化向量

@@ -3,6 +3,22 @@
 
 
 namespace ASMMmodel{
+	void ShapeInfo::imitate(ShapeInfo &spinfo ,const ShapeVector& shapvec, const string &imgname)
+	{
+		spinfo.imgname = imgname;
+		for (size_t i = 0; i <ptsInfos.size();i++)
+		{
+			PointInfo p;
+			p.id = ptsInfos[i].id;
+			p.pre =ptsInfos[i].pre;
+			p.next = ptsInfos[i].next;
+			p.x = shapvec(2 * i, 0);
+			p.y = shapvec(2 * i + 1, 0);
+			spinfo.ptsInfos.push_back(p);
+		}
+	
+	}
+	
 	void TrainingSetInfo::get_attributes(TiXmlElement *pElement)
 	{
 		if (!pElement)

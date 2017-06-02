@@ -2,22 +2,42 @@
 #define _TRAININGSETINFO_H_
 #include <vector>
 #include <string>
+#include "shapevector.h"
 #include "txml/tinystr.h"
 #include "txml/tinyxml.h"
 using namespace std;
 namespace ASMMmodel{
-	struct PointInfo
+	class PointInfo
 	{
+	public:
 		double x;
 		double y;
 		int  id;
 		int pre;
 		int next;
 	};
-	struct ShapeInfo
+	class ShapeInfo
 	{
+	public:
 		string imgname;
 		vector<PointInfo> ptsInfos;
+		void imitate(ShapeInfo &spinfo, const ShapeVector& shapvec, const string &imgname);
+		template<typename T>
+		void imitate(ShapeInfo &spinfo, const vector<cv::Point_<T>> &ptsList, const string &imgname)
+		{
+			spinfo.imgname = imgname;
+			for (size_t i = 0; i < ptsList.size(); i++)
+			{
+				PointInfo pinfo;
+				pinfo.x = ptsList[i].x;
+				pinfo.y = ptsList[i].y;
+				pinfo.pre = ptsInfos[i].pre;
+				pinfo.next = ptsInfos[i].next;
+				pinfo.id = ptsInfos[i].id;
+				spinfo.ptsInfos.push_back(p);
+			}
+		}
+
 	};
 	class TrainingSetInfo
 	{

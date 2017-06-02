@@ -13,9 +13,9 @@ namespace ASMMmodel{
 	class AsmImages
 	{
 	public:
-		AsmImages(ShapeInfo sp, int n = 7, int np = 3) :shapeInfo(sp), np(n), nPyramids(np), filename(sp.imgname){ loadShapeInfo = 1; }//自定义采样数，金字塔层数
+		AsmImages(ShapeInfo sp, int n = 7, int npy = 3) :shapeInfo(sp), np(n), nPyramids(npy), filename(sp.imgname){ loadShapeInfo = 1; }//自定义采样数，金字塔层数
 		~AsmImages(){}
-		AsmImages(){};
+		AsmImages(int n=7,int npy=3):np(n),nPyramids(npy){};
 		int nPoints;//点数
 		int np;//局部灰度模型的采样长度,应该为奇数，中心在特征点
 		int nPyramids;//金字塔层数
@@ -62,6 +62,7 @@ namespace ASMMmodel{
 		void init_build();
 		//搜索最佳点位置
 		void show(int l);
+		void refresh(const ShapeVector &newshape);
 	};
 }
 #endif

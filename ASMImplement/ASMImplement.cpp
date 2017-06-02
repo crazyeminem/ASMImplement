@@ -7,9 +7,9 @@ using namespace std;
 using namespace cv;
 int main()
 {
-	ShapeModel spModel;
-	spModel.buildModel("midfinger.xml");
-	spModel.imgSet[0].show(0);
-	spModel.showModel();
+	ASM debugSVM;
+	debugSVM.buildModel("midep.fad");
+	debugSVM.fit("test.jpg");
+	system("pause");
 	return 0;
 }

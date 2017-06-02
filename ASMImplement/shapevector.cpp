@@ -2,7 +2,7 @@
 #include "shapevector.h"
 namespace ASMMmodel{
 	
-	 ShapeVector::ShapeVector(ShapeInfo &spInfo)
+	 ShapeVector::ShapeVector(const ShapeInfo &spInfo)
 	{
 		size_t nums = spInfo.ptsInfos.size();
 		Mat_<double>shapeMat;
@@ -12,7 +12,7 @@ namespace ASMMmodel{
 			shapeMat(i * 2, 0) = spInfo.ptsInfos[i].x;
 			shapeMat(i * 2 + 1, 0) = spInfo.ptsInfos[i].y;
 		}
-		*this = shapeMat;
+		new(this) ShapeVector(shapeMat);
 	}
 	double ShapeVector::calcMeanX()const
 	{
@@ -103,7 +103,7 @@ namespace ASMMmodel{
 	}
 	 void ShapeVector::show()
 	 {
-		 cout << *this << endl;
+		 //cout << *this << endl;
 		 vector<Point> pts = this->vec2Pts();
 		 Mat vec_img = Mat::zeros(Size(255,255),CV_8U);
 		 for (auto p:pts)

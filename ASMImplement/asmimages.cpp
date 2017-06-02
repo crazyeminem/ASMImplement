@@ -81,7 +81,7 @@ namespace ASMMmodel{
 
 		normPoints.resize(2*rad+1);
 		int rX, rY;
-		for (i = (np-1)/2; i >= -(np-1)/2; i--){
+		for (i = rad; i >= -rad; i--){
 			rX = (pts[pId].x >> level) + nx + offsetX;
 			rY = (pts[pId].y >> level) + ny + offsetY;
 			if (rX < 0) rX = 0;
@@ -259,6 +259,12 @@ namespace ASMMmodel{
 		imshow(filename, ImgShow);
 		waitKey(0);
 	}
-
+	void AsmImages::refresh(const ShapeVector &newshape)
+	{
+		shape = newshape;
+		pts.clear();
+		loadPts();
+		
+	}
 }
 
