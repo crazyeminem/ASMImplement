@@ -85,6 +85,7 @@
     <ClInclude Include="ASM.h" />
     <ClInclude Include="asmimages.h" />
     <ClInclude Include="ASMImplement.h" />
+    <ClInclude Include="Preprocess.h" />
     <ClInclude Include="shapemodel.h" />
     <ClInclude Include="shapevector.h" />
     <ClInclude Include="stdafx.h" />
@@ -96,6 +97,7 @@
     <ClCompile Include="ASM.cpp" />
     <ClCompile Include="asmimages.cpp" />
     <ClCompile Include="ASMImplement.cpp" />
+    <ClCompile Include="Preprocessing.cpp" />
     <ClCompile Include="ShapeModel.cpp" />
     <ClCompile Include="shapevector.cpp" />
     <ClCompile Include="stdafx.cpp">

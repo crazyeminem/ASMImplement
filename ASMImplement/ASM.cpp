@@ -115,7 +115,7 @@ namespace ASMMmodel{
 	}
 	void ASM::iterateSearch(int level)//寻找特征点最佳匹配
 	{
-		int iteration = 20;
+		int iteration = 10;
 		if (level>0)
 		{
 			iteration = 5;
@@ -153,7 +153,7 @@ namespace ASMMmodel{
 					double mDis = Mahalanobis(localFeaure, (grayFeatureMap[level])[i], (icovarMap[level])[i]);
 					if (offset==0)
 					{
-						//cout << "当前点 " << i << "+ " << offset << "	Mahalanobis距离= " << mDis << "	" << "最小Mahalanobis距离= " << minDis << endl;
+						//buzcout << "当前点 " << i << "+ " << offset << "	Mahalanobis距离= " << mDis << "	" << "最小Mahalanobis距离= " << minDis << endl;
 						
 					}
 					//cout << "当前点" <<i<<"+ " <<offset<< "	Mahalanobis距离= " << mDis << "	" << "最小Mahalanobis距离= " << minDis << endl;

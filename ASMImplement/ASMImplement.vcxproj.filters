@@ -45,6 +45,9 @@
     <ClInclude Include="ASM.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="Preprocess.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -81,6 +84,9 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="ASM.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Preprocessing.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

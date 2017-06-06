@@ -44,7 +44,7 @@ namespace ASMMmodel{
 		//形状参数b
 		Mat_<double> b;
 		//局部特征搜索半径
-		int k=7;
+		int k=9;
 		//局部特征采样半径
 		int np;
 		
